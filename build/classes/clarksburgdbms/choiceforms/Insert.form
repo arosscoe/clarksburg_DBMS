@@ -50,9 +50,11 @@
                       </Group>
                       <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                       <Component id="GuardianRadio" min="-2" pref="123" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="gradeRadio" min="-2" pref="123" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="151" max="32767" attributes="0"/>
+              <EmptySpace pref="22" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -69,6 +71,7 @@
                   <Component id="StudentRadio" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="StaffRadio" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="GuardianRadio" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="gradeRadio" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="goButton" min="-2" max="-2" attributes="0"/>
@@ -124,6 +127,14 @@
           <ComponentRef name="buttonGroup1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Guardian"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="gradeRadio">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="buttonGroup1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Grade Report"/>
       </Properties>
     </Component>
   </SubComponents>

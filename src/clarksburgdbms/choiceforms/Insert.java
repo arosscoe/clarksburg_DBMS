@@ -5,6 +5,7 @@
 package clarksburgdbms.choiceforms;
 
 import clarksburgdbms.Main;
+import clarksburgdbms.actionforms.insert.AddGradeReport;
 import clarksburgdbms.actionforms.insert.AddGuardian;
 import clarksburgdbms.actionforms.insert.AddStaff;
 import clarksburgdbms.actionforms.insert.AddStudent;
@@ -38,6 +39,7 @@ public class Insert extends javax.swing.JFrame {
         HomeButton = new javax.swing.JButton();
         goButton = new javax.swing.JButton();
         GuardianRadio = new javax.swing.JRadioButton();
+        gradeRadio = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,6 +69,9 @@ public class Insert extends javax.swing.JFrame {
         buttonGroup1.add(GuardianRadio);
         GuardianRadio.setText("Guardian");
 
+        buttonGroup1.add(gradeRadio);
+        gradeRadio.setText("Grade Report");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -89,8 +94,10 @@ public class Insert extends javax.swing.JFrame {
                                 .addGap(291, 291, 291)
                                 .addComponent(goButton)))
                         .addGap(63, 63, 63)
-                        .addComponent(GuardianRadio, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(151, Short.MAX_VALUE))
+                        .addComponent(GuardianRadio, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(gradeRadio, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,7 +110,8 @@ public class Insert extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(StudentRadio)
                     .addComponent(StaffRadio)
-                    .addComponent(GuardianRadio))
+                    .addComponent(GuardianRadio)
+                    .addComponent(gradeRadio))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(goButton)
                 .addContainerGap(280, Short.MAX_VALUE))
@@ -118,17 +126,20 @@ public class Insert extends javax.swing.JFrame {
     }//GEN-LAST:event_HomeButtonActionPerformed
 
     private void goButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goButtonActionPerformed
-        if (!StudentRadio.isSelected() && !StaffRadio.isSelected() && !GuardianRadio.isSelected()) {
+        if (!StudentRadio.isSelected() && !StaffRadio.isSelected() && !GuardianRadio.isSelected() && !gradeRadio.isSelected()) {
             //do nothing
-        } else if (StudentRadio.isSelected() && !StaffRadio.isSelected() && !GuardianRadio.isSelected()) {
+        } else if (StudentRadio.isSelected() && !StaffRadio.isSelected() && !GuardianRadio.isSelected() && !gradeRadio.isSelected()) {
             dispose();
             new AddStudent().setVisible(true);
-        } else if (!StudentRadio.isSelected() && StaffRadio.isSelected() && !GuardianRadio.isSelected()) {
+        } else if (!StudentRadio.isSelected() && StaffRadio.isSelected() && !GuardianRadio.isSelected() && !gradeRadio.isSelected()) {
             dispose();
             new AddStaff().setVisible(true);
-        } else if (!StudentRadio.isSelected() && !StaffRadio.isSelected() && GuardianRadio.isSelected()) {
+        } else if (!StudentRadio.isSelected() && !StaffRadio.isSelected() && GuardianRadio.isSelected() && !gradeRadio.isSelected()) {
             dispose();
             new AddGuardian().setVisible(true);
+        } else if (!StudentRadio.isSelected() && !StaffRadio.isSelected() && !GuardianRadio.isSelected() && gradeRadio.isSelected()) {
+            dispose();
+            new AddGradeReport().setVisible(true);
         }
     }//GEN-LAST:event_goButtonActionPerformed
 
@@ -174,6 +185,7 @@ public class Insert extends javax.swing.JFrame {
     private javax.swing.JRadioButton StudentRadio;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton goButton;
+    private javax.swing.JRadioButton gradeRadio;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
